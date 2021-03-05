@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivysettings>
+    <property name="repo.url" value="http://repository.jsweet.org/artifactory/libs-release-local"/>
+    <settings defaultResolver="mychain"/>
+    <resolvers>
+    <chain name="mychain"  returnFirst="true">
+      <url name="myrepo" m2compatible="true">  
+        <ivy pattern="${repo.url}/[organisation]/[module]/ivy-[revision].xml" />  
+        <artifact pattern="${repo.url}/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />  
+      </url>
+      <ibiblio name="maven" m2compatible="true" usepoms="true"/>
+      <url name="test" m2compatible="true">
+  <artifact pattern="https://repo1.maven.org/maven2/[organisation]/[module]/[revision]/[artifact].[revision].[ext]"/>
+  </url>
+</chain>
+    </resolvers>
+</ivysettings>

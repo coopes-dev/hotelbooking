@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="css/common.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<script src="js/command.js"></script>
+<script src="js/strings.js"></script>
+<script src="js/register.js"></script>
+
+<title>Register</title>
+</head>
+
+<body onload="Register.getInstance().onLoad(Register.getInstance().setUpPage);">
+
+<div id="loginCaption">Username</div>
+
+<input type="text" id="username"></input>
+<br />
+<div id="passwordCaption">Password</div>
+<input type="password" id="password"></input>
+<br />
+<div id="roleCaption">Role</div>
+<select id="role">
+</select>
+
+<input class="translated" type="button" id="registerButton" value="{Register_Button}" onclick="Register.getInstance().execute()"></input>
+
+<div class="translated" id="response"></div>
+</body>
+</html>
+

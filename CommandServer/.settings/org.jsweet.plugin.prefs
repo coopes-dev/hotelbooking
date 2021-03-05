@@ -1,0 +1,9 @@
+compiler.bundle=true
+compiler.javascriptFolder=WebContent/js
+compiler.moduleKind=none
+compiler.profiles=default
+compiler.sourceFolders=src/acme/crypto
+compiler.sourceIncludeFilter=
+compiler.target=ES6
+compiler.typescriptFolder=
+eclipse.preferences.version=1

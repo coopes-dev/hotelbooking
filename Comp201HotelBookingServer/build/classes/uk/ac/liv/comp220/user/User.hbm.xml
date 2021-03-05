@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 Feb 2020, 17:52:03 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="uk.ac.liv.comp220.user.User" table="USER">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="role">
+   <column name="ROLE"/>
+   <type name="org.hibernate.type.EnumType">
+    <param name="enumClass">uk.ac.liv.comp220.user.Role</param>
+    <param name="type">12</param>
+   </type>
+  </property>
+  <property generated="never" lazy="false" name="username" type="java.lang.String">
+   <column name="USERNAME" not-null="true" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="password" type="java.lang.String">
+   <column name="PASSWORD"/>
+  </property>
+  <property generated="never" lazy="false" name="dateOfBirth" type="java.util.Date">
+   <column name="DATEOFBIRTH"/>
+  </property>
+  <property generated="never" lazy="false" name="forename1" type="java.lang.String">
+   <column name="FORENAME1"/>
+  </property>
+  <property generated="never" lazy="false" name="forename2" type="java.lang.String">
+   <column name="FORENAME2"/>
+  </property>
+  <property generated="never" lazy="false" name="surname" type="java.lang.String">
+   <column name="SURNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="challenge" type="long">
+   <column name="CHALLENGE"/>
+  </property>
+  <property access="field" generated="never" lazy="false" name="ctr" type="int">
+   <column name="CTR"/>
+  </property>
+ </class>
+</hibernate-mapping>

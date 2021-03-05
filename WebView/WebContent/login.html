@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/common.css"/>   
+    
+    
+    
+<script  src="http://localhost:8080/CommandServer/js/bundle.js">   </script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<script src="js/command.js"></script>
+<script src="js/login.js"></script>
+<script src="js/strings.js"></script>
+
+
+
+
+    <title>Login</title>
+
+
+</head>
+
+<body onload="Login.getInstance().onLoad()">
+<div id="main">
+<div class="translated captionField" id="loginCaption">{TEXT_LOGIN}</div>
+    <input class="translated inputField" type="text" id="username" placeholder="{Username}"></input><br/>
+<div class="translated captionField" id="passwordCaption" >{TEXT_PASSWORD}</div>
+    <input class="translated inputField" type="password" id="password" placeholder="{Password}"></input>
+    <br/>
+<input class="translated" type="button" id="loginButton" value="{Login_Button}" onclick="Login.getInstance().execute()"></input>
+
+<div id="response"></div>
+</div>
+</body>
+</html>

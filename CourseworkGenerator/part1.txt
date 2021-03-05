@@ -1,0 +1,30 @@
+COMP285/COMP220 Lab coursework  (Ant and Junit) 		Date	 April 20th 2020   
+
+Deadline 10.00 am  22/04/2020
+
+University of Liverpool		Computer Science
+
+For this test you must produce a build directory and ant build file.
+
+
+You must also produce a Junit java test file call RegistrationHelperTest.java with tests to test the code. 
+
+A stub form of this test file is provided for you.
+
+There are 2 files, RegistrationHelper.java and RegistrationHelperTest.java
+
+NOTE The file RegistrationHelper.java you have been given contains no bugs. So all tests should pass.
+
+RegistrationHelper.java is the file you will be testing and it should be copied into the src directory.  
+
+IMPORTANT The package name for all the files in this project needs to be labtest, so please copy the files into the correct source directories.  So RegistrationHelper.java needs
+
+to to be in src\labtest
+
+Here is the specification of the code (note each student's specification is different, do not use another student's coursework specification)
+
+There is 1 method called boolean checkUsernamePassword(String username, String password)
+
+This method will return true if both the username and password are valid, if the username or password are invalid it will return false.
+
+

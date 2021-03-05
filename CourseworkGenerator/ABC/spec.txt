@@ -1,0 +1,85 @@
+COMP285/COMP220 Lab coursework  (Ant and Junit) 		Date	 March/April 2020
+
+University of Liverpool		Computer Science
+
+For this test you must produce a build directory and ant build file.
+
+
+You must also produce a Junit java test file call RegistrationHelperTest.java with tests to test the code. 
+
+A stub form of this test file is provided for you.
+
+There are 2 files, RegistrationHelper.java and RegistrationHelperTest.java
+
+NOTE The RegistrationHelper java you have been contains no bugs. So all tests should pass.
+
+RegistrationHelper.java is the file you will be testing and it should be copied into the src directory.  
+
+IMPORTANT The package name for all the files in this project needs to be labtest, so please copy the files into the correct source directories.  So RegistrationHelper.java needs
+
+to to be in src\labtest
+
+Here is the specification of the code (note each student's specification is different, do not use another students coursework specification)
+
+There is 1 method called boolean checkUsernamePassword(String username, String password)
+
+This method will return true if both the username and password are valid, if the username or password are invalid it will return false.
+
+
+
+ The following are the validation rules:
+1.	If either the username or password are null then the method will return false.
+2.	The username must be at least 9 characters long and must start with an alphabetic character (A-Z, a-z).
+3.	The username must be no more than 12 characters long.
+4.	The password must be at least 10 characters long.
+5.	The password must contain at least one lower case letter.
+6.	The password must contain at least one upper case letter.
+7.	The password must at least one a digit.
+8.	The password must have a special character one of the following %$&
+
+The test source files for this lab test should be stored in test\src
+
+There should be a directory called build\classes where the classes are stored. 
+
+Your ant file should compile Main.java  and RegistrationHelperTest.java and then leave the result in build\classes.
+
+Submission
+You must submit your electronically via the following link 
+https://sam.csc.liv.ac.uk/COMP/Submissions.pl
+
+Your submission must consist of the following
+
+A zipped up file which is the whole build directory, the name of this file should be named
+
+LabtestXXXXXX.zip  where XXXXXXX is your long University id number.
+
+This zipped file must contain:
+A build.xml file which compiles makes output directories if needed, builds the target code, builds the test code and runs the Junit tests and also produces reports about the tests in XML and HTML.
+
+The directory structure should have the following directories
+
+build\classes	Containing all classes for the application  (test and target classes)
+
+test\reports	Stores HTML and XML reports
+
+test\src		Test code containing the code RegistrationHelperTest.java
+
+src		Containing the files Main.java and RegistrationHelper.java
+
+lib		Any libraries you may need  e.g. JUnit
+
+Marking
+The marks are assigned as follows:
+Quality of the Junit file					60%	broken down as
+Appropriate structure of file and readability		10%
+Ability to reveal bugs					50%
+
+Quality of Ant file					40%	broken down as
+Production of correct final outputs			20%
+Formatting, readability, good use of properties		20%
+Note for the â€œAbility to reveal bugsâ€? part of your assessment you tests must do the following:
+
+1.	Run with no failure if the code has no bugs, if your tests fail for the bug free code, then you will get zero marks for this component.
+
+2.	Reveal bugs if the code has bugs in it, your tests will be tested against various versions of the code with bugs that have been added on purpose
+TIPS Make each assertion test case test only 1 issue at a time.  Check all boundaries, edge cases.

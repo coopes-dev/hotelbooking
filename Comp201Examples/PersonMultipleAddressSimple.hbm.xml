@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 Feb 2020, 17:52:03 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class name="database.PersonAggregateExample" table="PERSON">
+  <id name="id" type="int">
+   <column name="ID"/>
+   <generator class="native"/>
+  </id>
+  <property generated="never" lazy="false" name="dateOfBirth" type="java.util.Date">
+   <column name="DATEOFBIRTH"/>
+  </property>
+  <property generated="never" lazy="false" name="forename1" type="java.lang.String">
+   <column name="FORENAME1"/>
+  </property>
+  <property generated="never" lazy="false" name="forename2" type="java.lang.String">
+   <column name="FORENAME2"/>
+  </property>
+  <property generated="never" lazy="false" name="surname" type="java.lang.String">
+   <column name="SURNAME"/>
+  </property>
+  <property generated="never" lazy="false" name="address" type="database.Address">
+   <column name="Address"/>
+  </property>
+  
+ </class>
+</hibernate-mapping>

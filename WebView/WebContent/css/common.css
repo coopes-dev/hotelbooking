@@ -1,0 +1,43 @@
+body {
+
+}
+
+.formContainer {
+    padding:2%;
+    width:50%;
+    margin-left : 4%;
+    margin-bottom: 12px;
+    border: #3f5fbf;
+    border-width:thick;
+    border-style: groove;
+}
+
+.titleField {
+    margin-left : 8px;
+    margin-bottom: 12px;
+}
+
+
+
+.captionField {
+    margin-left : 8px;
+    margin-bottom: 12px;
+}
+
+
+.inputField {
+    display: inline;
+    margin-left : 8px;
+    margin-bottom: 12px;
+}
+
+.translated {
+    visibility: hidden;
+}
+
+.statusField {
+    display: inline;
+    margin-left : 8px;
+    margin-bottom: 12px;
+    color : red;
+}

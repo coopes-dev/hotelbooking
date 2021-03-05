@@ -1,0 +1,7 @@
+{
+    "TEXT_LOGIN": "La ouverture de session",
+    "TEXT_USERNAME": "Nom d'utilisateur",
+    "TEXT_PASSWORD": "Mot de passe",
+    "TUSERNAME": "Entrez le nom d'utilisateur",
+    "TPASSWORD": "Entrer le mot de passe"
+}

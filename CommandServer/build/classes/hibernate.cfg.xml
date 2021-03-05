@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="connection.password">password1234</property>
+  <property name="connection.url">jdbc:mysql://127.0.0.1:3307/clinic</property>
+  <property name="connection.username">testuser</property>
+  <property name="show_sql">true</property>
+  <property name="hbm2ddl.auto">update</property>
+  <property name="hibernate.jdbc.log.warnings">true</property>
+  <mapping package="uk.ac.liv.comp220.user" resource="uk/ac/liv/comp220/user/Doctor.hbm.xml"/>
+  <mapping package="uk.ac.liv.comp220.user" resource="uk/ac/liv/comp220/user/Patient.hbm.xml"/>
+  <mapping package="uk.ac.liv.comp220.user" resource="uk/ac/liv/comp220/user/User.hbm.xml"/>
+ </session-factory>
+</hibernate-configuration>

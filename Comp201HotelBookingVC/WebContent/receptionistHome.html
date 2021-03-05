@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reception</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/command.js"></script>
+<script src="js/guest.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/reception.js"></script>
+<script src="js/strings.js"></script>
+        <link rel="stylesheet" href="css/common.css"/>   
+    
+</head>
+
+<body onload="Reception.instance.setUpPage()">
+
+<div id="main">
+
+        <div id="topBanner">
+        <input class="translated" type="button" id="logoutButton" value="{Logout_Button}" onclick="Reception.instance.logout()"></input>
+        <input class="translated" type="button" id="checkAvailable" value="Check Availibilty" onclick="Reception.instance.showPanel('panelCheckAvailable')"></input>
+        <input class="translated" type="button" id="addGuestButton" value="Add Guest" onclick="Reception.instance.showPanel('panelAddGuest')"></input>
+        <input class="translated" type="button" id="createBooking" value="Bookings" onclick="Guest.instance.getGuestList()"></input>        
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div id="panelBookings" style="display:none" class="mainPanel">
+        <label class="translated">{Text:ChooseGuest}</label><select name="" id="guestChooser" onchange="Guest.instance.guestChange()"> 
+        <option value="0"></option>
+        </select>
+        <b><input class="translated" type="button" id="addBookingButton" value="Add booking" onclick="Guest.instance.addBooking()"></input></b>
+        
+        
+        <label class="translated">{Text:ChooseBooking}</label><select name="" id="bookingChooser" onchange="Booking.instance.bookingChange()"> 
+        <option value="0"></option>
+        </select>
+        	
+        <div id="bookibngDetails"  class="insidePanel">
+        <div>Booking Details</div>
+        <br/>
+        <br/>
+<table id="roomBookings" class="tg" style="undefined;table-layout: auto; width: 70%">
+<colgroup>
+<col style="width: 38px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+<col style="width: 30px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-baqh">Room number</th>
+    <th class="tg-0lax">Class</th>
+    <th class="tg-0lax">Max occupancy</th>
+    <th class="tg-0lax">Tariff</th>
+    <th class="tg-0lax">Start Date</th>
+    <th class="tg-0lax">End Date</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax"></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+  
+</tbody>
+</table>
+        </div>
+        </div>
+        <div id="panelAddGuest" style="display:none" class="mainPanel">
+        
+        <b><label for="guest" class="translated">Add new Guest</label></b>
+        <br/>
+                  
+        <label for="surname" class="translated">Surname</label><input type="text"  id="surname"/><div class="errorField" id="surnameError"></div>
+        <br/>
+        <label for="forename1" class="translated">Forename</label><input type="text"  id="forename1"/><div class="errorField" id="forename1Error"></div>
+        <br/>
+        <label for="forename2" class="translated">Middle name</label><input type="text"  id="forename2"/><div class="errorField" id="forename2Error"></div>
+        <br/>
+        <label for="email" class="translated">Email</label><input type="text"  id="email"/><div class="errorField" id="emailError"></div>
+        <br/>
+        
+        <label for="houseNameNumber" class="translated">House name or number</label><input type="text"  id="houseNameOrNumber"/><div class="errorField" id="hoseNameOrNumberError"></div>
+        <br/>
+        <label for="addressLine1" class="translated">Address line 1</label><input type="text"    id="addressLine1"/><div class="errorField" id="addressLine1Error"></div>
+        <br/>
+        <label for="addressLine2" class="translated">Address line 2</label><input type="text"    id="addressLine2"/><div class="errorField" id="addressLine2Error"></div>
+        <br/>
+        <label for="postalTownCity" class="translated">Town/City</label><input type="text"   id="postalTownCity"/><div class="errorField" id="postalTownCityError"></div>
+        <br/>
+        <label for="postCode" class="translated">Post code</label><input type="text"  id="postalOrZipCode"/><div class="errorField" id="postalOrZipCodeError"></div>
+        
+        
+        <br/>
+        <label for="guestButton" class="translated"></label><b><input class="translated" type="button" id="addGuestButton" value="Add Guest" onclick="Guest.instance.addGuest()"></input></b>
+        <br/>
+        <br/>
+        
+        <div  id="response"></div>
+                  
+        </div>
+        <div id="panelCheckAvailable" class="mainPanel">
+        <label for="startDate" class="translated">{Text:StartD}</label><input  type="text" id="datepickerStart"/>
+        <br/>
+        <br/>
+        <label for="endDate" class="translated">{Text:EndD}</label><input type="text"   id="datepickerEnd"/>
+        <br/>
+        <br/>
+        
+        <label class="translated">{Text:NOR}</label><select name="" id="roomCount" onchange="Reception.instance.roomsChange()"> 
+        <option value="0"></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        </select>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        
+        <input class="translated  captionField" type="button" id="searchButton" value="{Text:Search}" onclick="Reception.instance.search()"></input>
+        <br/>
+        <br/>
+        <br/>
+        
+        
+		<div class="captionField" id="roomsAvailable"></div>
+</div>
+        </div>
+        
+        
+</body>
+</html>

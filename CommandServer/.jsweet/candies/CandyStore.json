@@ -1,0 +1,14 @@
+{
+  "candies": [
+    {
+      "name": "jsweet-core",
+      "version": "6.1.0",
+      "lastUpdateTimestamp": 1578827724000,
+      "modelVersion": "unknown",
+      "transpilerVersion": "${jsweet.transpiler.version}",
+      "jsOutputDirPath": "C:\\comp220_1920\\eclipse-workspace_photon\\CommandServer",
+      "jsDirPath": "META-INF/resources/webjars/jsweet-core/6.1.0",
+      "jsFilesPaths": []
+    }
+  ]
+}

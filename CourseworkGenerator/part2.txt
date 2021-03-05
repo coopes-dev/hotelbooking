@@ -1,0 +1,51 @@
+The test source files for this lab test should be stored in test\src
+
+There should be a directory called build\classes where the classes are stored. 
+
+Your ant file should compile Main.java  and RegistrationHelperTest.java and then leave the result in build\classes.
+
+Submission
+You must submit your electronically via the following link 
+https://sam.csc.liv.ac.uk/COMP/Submissions.pl
+
+Your submission must consist of the following:
+
+A zipped up file which is the whole build directory, the name of this file should be named
+
+LabtestXXXXXX.zip  where XXXXXXX is your long University id number.
+
+This zipped file must contain:
+A build.xml file which compiles makes output directories if needed, builds the target code, builds the test code and runs the Junit tests and also produces reports about the tests in XML and HTML.
+
+The directory structure should have the following directories
+
+build\classes	Containing all classes for the application  (test and target classes)
+
+test\reports	Stores HTML and XML reports
+
+test\src		Test code containing the code RegistrationHelperTest.java
+
+src		Containing the files Main.java and RegistrationHelper.java
+
+lib		Any libraries you may need  e.g. JUnit
+
+Marking
+The marks are assigned as follows:
+Quality of the Junit file					60%	broken down as
+Appropriate structure of file and readability		10%
+Ability to reveal bugs					50%
+
+Quality of Ant file					40%	broken down as
+Production of correct final outputs			20%
+Formatting, readability, good use of properties		20%
+
+Note for the ability to reveal bugs part of your assessment you tests must do the following:
+
+1.	Run with no failure if the code has no bugs, if your tests fail for the bug free code, then you will get zero marks for this component.
+
+2.	Reveal bugs if the code has bugs in it, your tests will be tested against various versions of the code with bugs that have been added on purpose
+
+TIPS Make each assertion test case test only 1 issue at a time.  Check all boundaries, edge cases.
+
+
+Late submissions policy and Plagiarism/collusion are described in Student's Handbook, https://intranet.csc.liv.ac.uk/student/ug-handbook.pdf  Section 5 
